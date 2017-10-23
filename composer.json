@@ -1,0 +1,44 @@
+{
+  "name": "macki/laravel-gsa",
+  "description": "Google Sheets API v4 library for Laravel5",
+  "license": "MIT",
+  "keywords": [
+    "google",
+    "sheets",
+    "laravel"
+  ],
+  "authors": [
+    {
+      "name": "Tetsuo Makino",
+      "email": "beyond.prep@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "google/apiclient":"^2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.0",
+    "mockery/mockery": "0.9.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Macki\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Macki\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Macki\\Providers\\GoogleSheetsApiServiceProvider"
+      ],
+      "aliases": {
+        "Sheets": "Macki\\Facades\\GoogleSheetsApi"
+      }
+    }
+  }
+}
